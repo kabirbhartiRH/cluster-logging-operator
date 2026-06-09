@@ -103,8 +103,8 @@ type ContainerInputTuningSpec struct {
 	// +operator-sdk:csv:customresourcedefinitions:type=spec,displayName="Per-Container Rate Limit"
 	RateLimitPerContainer *LimitSpec `json:"rateLimitPerContainer,omitempty"`
 
-	// MaxMessageSize  The maximum message length in bytes that a single log event can be when all
-	// partial log lines are merged.  Messages exceeding this limit are dropped.
+	// MaxMessageSize is the maximum message length in bytes that a single log event can be when partial log lines are merged.
+	// Messages exceeding this limit are dropped.
 	// +kubebuilder:validation:Optional
 	// +operator-sdk:csv:customresourcedefinitions:type=spec,displayName="Max Message Size"
 	MaxMessageSize *resource.Quantity `json:"maxMessageSize,omitempty"`
